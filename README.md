@@ -31,28 +31,14 @@ docker build -t talosctl .
 
 ## Run talosctl (container)
 
-### Example A: Linux (host networking works)
-
 ```bash
 docker run --rm -it \
   --network host \
+  -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$PWD":/work \
   -w /work \
   talosctl
 ```
-
-### Example B: macOS / Docker Desktop (recommended: no host network)
-
-Docker Desktop’s networking is already NAT’d; you usually do NOT need `--network host` for public IPs.
-
-```bash
-docker run --rm -it \
-  -v "$PWD":/work \
-  -w /work \
-  talosctl
-```
-
-> Tip: Only mount the Docker socket if you truly need it. Most Talos workflows do not.
 
 ## Set your node IPs
 
