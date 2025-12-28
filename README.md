@@ -1,4 +1,8 @@
 ```bash
+docker build -t talosctl .
+```
+
+```bash
 docker run --rm -it \
         --network host \
         -v /var/run/docker.sock:/var/run/docker.sock \
@@ -6,9 +10,11 @@ docker run --rm -it \
         talosctl
 ```
 
+Inside the docker container, run the following commands:
+
 ```bash
-export CONTROL_PLANE_IP=152.53.168.188
-export WORKER_IP=("152.53.171.85" "152.53.170.86")
+export CONTROL_PLANE_IP=168.63.128.455
+export WORKER_IP=("168.63.188.85" "168.63.188.86")
 ```
 
 ```bash
