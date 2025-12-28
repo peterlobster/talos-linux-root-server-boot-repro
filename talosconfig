@@ -1,0 +1,7 @@
+context: Lab
+contexts:
+    Lab:
+        endpoints: []
+        ca: LS0t...tCg==
+        crt: LS0...tLS0K
+        key: LS0t...tLS0K
